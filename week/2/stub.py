@@ -68,6 +68,8 @@ def brute_force():
 
         s.send(username + "\n")
         s.send(password + "\n")
+        print(password)
+
         data = s.recv(1024)
         print(data)
 
