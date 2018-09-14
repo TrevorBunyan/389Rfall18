@@ -66,12 +66,15 @@ def brute_force():
         s.connect((host, port))
         password = word  # Hint: use wordlist
 
+        print(s.recv(1024))
         s.send(username + "\n")
-        s.send(password + "\n")
-        print(password)
 
-        data = s.recv(1024)
-        print(data)
+        print(s.recv(1024))
+        s.send(word + "\n")
+
+        print(word)
+
+        print(s.recv(1024))
 
 
 
