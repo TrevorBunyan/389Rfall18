@@ -26,8 +26,8 @@ Digital acknowledgement of honor pledge: *PUT YOUR NAME HERE*
 
 7. The operating system for the server is Ubuntu. I found this by entering the IP into censys.
 
-8. *(BONUS)* The flags I found during this assignment were CMSC389R-{fly_th3_sk1es_w1th_u5} and {h1dden_fl4g_in_s0urce}.
+8. *(BONUS)* The flags I found during this assignment were CMSC389R-{fly_th3_sk1es_w1th_u5}, CMSC389R-{h1dden_fl4g_in_s0urce}, and CMSC389R-{c0rn3rstone-air-27670}.
 
 ### Part 2 (55 pts)
 
-*REPLACE THIS TEXT WITH A BRIEF EXPLANATION OF YOUR APPROACH TO SOLVING THIS CHALLENGE, AND THE OUTCOME*
+I first looked for the correct port number. I used nmap -p1-2000 to find the open port, then connected to it using the nc command to verify it. Then I wrote the brute force script, using a for loop to iterate over all passwords in rockyou.txt. I concluded that "kruegster" was the most likely username since that was his email. After I ran the brute force script to crack the password, I went into the home/flight_records directory. I saw on Krueger's instagram that he was on flight AAC27670, so I used the grep command to look for any flags inside of the file AAC27670.txt. I found the flag CMSC389R-{c0rn3rstone-air-27670} in the file. 
