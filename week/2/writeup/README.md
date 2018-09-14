@@ -16,7 +16,7 @@ Digital acknowledgement of honor pledge: *PUT YOUR NAME HERE*
 
 2. Fred lives in Silver Spring, MD, based on the information I found on his stwity profile. His email is kruegster@tutanota.com and he is the owner of Cornerstone Airlines according to the company website. He also has reddit and stwity, accounts, which I was able to find by googling the username.
 
-3. The IP address is 142.93.118.186 which I found when I clicked on the Admin page of the website. The URL was replaced with the IP address since the page is under construction. I also found this IP when I used the whois command in Kali.
+3. The IP address is 142.93.118.186 which I found by using the website ipinfo.info. I also found this IP when I used the whois command in Kali.
 
 4. I found a directory /secret from the robots.txt file. The flags I found were CMSC389R-{h1dden_fl4g_in_s0urce} and CMSC389R-{fly_th3_sk1es_w1th_u5}.
 
