@@ -44,8 +44,7 @@ print(fake_hash)
 ### STEP 2: Craft payload ###
 #############################
 
-# TODO: calculate proper padding based on secret + message
-# secret is <redacted> bytes long (48 bits)
+# secret is <redacted> bytes long
 # each block in MD5 is 512 bits long
 # secret + message is followed by bit 1 then bit 0's (i.e. \x80\x00\x00...)
 # after the 0's is a bye with message length in bits, little endian style
@@ -54,7 +53,6 @@ print(fake_hash)
 # (i.e. len(secret + message + padding) = 64 bytes = 512 bits
 message_length = len(message)
 secret_length = 6           # lowest length of the secret
-malicious_length = 8
 message_size = ['\x50', '\x58', '\x60', '\x68', '\x70', '\x78', '\x80', '\x88', '\x90', '\x98']
 current_size = 0
 
@@ -76,11 +74,3 @@ while(data.find("CMSC") == -1):
 
     secret_length += 1
     current_size += 1
-
-# payload is the message that corresponds to the hash in `fake_hash`
-# server will calculate md5(secret + payload)
-#                     = md5(secret + message + padding + malicious)
-#                     = fake_hash
-
-# send `fake_hash` and `payload` to server (manually or with sockets)
-# REMEMBER: every time you sign new data, you will regenerate a new secret!
