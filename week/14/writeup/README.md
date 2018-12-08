@@ -16,7 +16,7 @@ After investigating the website, I realized that the item page used a parameter 
 
 Based on hints given on the prompt, I then tried using SQL injection. At first I passed `' OR '1'='1` as the id parameter, but I was given an error back from the server. However, when I tried using some other variations, such as `' OR '2'='3'` I was given the default item again, so I determined that some common SQL commands where invalid as input to the parameter. This led me to my final argument, `' OR 'true'='true`, which generated a page containing the information for every item in the table.
 
-One of the items returned was named "FLAG", and its description contained the flag CMSC38R-{y0U-are_the_5ql_n1nja}. The '9' was missing from the standard flag format, but I assuming that it is a spelling error. I also found the flag separately by passing "1337" as the argument to id since most numbers/references used in this class have been jokes.
+One of the items returned was named "FLAG", and its description contained the flag CMSC38R-{y0U-are_the_5ql_n1nja}. The '9' was missing from the standard flag format, but I am assuming that it is a spelling error. I also found the flag separately by passing "1337" as the argument to id since most numbers/references used in this class have been jokes.
 
 ### Part 2 (30 Pts)
 
